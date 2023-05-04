@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Raleway&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --width: 30px;
+  --height: 30px;
+  --font: 'Raleway';
+}
+
+body {
+  font-family: var(--font), sans-serif;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  /* min-height: 100vh; */
+  background: #17A2B8;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+footer a {
+	color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+}
+
+footer a:hover {
+	filter: brightness(110%);
+	transition: 0.3s;
+  color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 95%;
+}
+
+
+/* Dice */
+
+.dice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  width: 80%;
+  min-height: 100px;
+}
+
+.dice {
+  background-color: whitesmoke;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.dice-dot {
+  --top: 0%;
+  --left: 0%;
+
+  width: 15px;
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+
+  /* Dot Positioning */
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translateX(calc(var(--left) * -1)) translateY(calc(var(--top) * -1));
+}
+
+.btn-roll-dice {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.75rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn-roll-dice:hover {
+  background-color: rgba(0, 0, 0, 0.753);
+  color: whitesmoke;
+  transition: 0.5s;
+  transform: scale(1.0);
+}
+
+.btn-roll-dice:active {
+  transform: scale(1.5);
+}
+
+.dice-value {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.dice-side {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  /* width: 90%; */
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.dice-num {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+/* Buttons */
+.btns {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.btns button {
+  width: 100px;
+  padding: 15px 0;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  filter: brightness(1.1);
+}
+
+.reset {
+  background-color: transparent;
+  color: whitesmoke;
+}
